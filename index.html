@@ -10,10 +10,18 @@
     <body>
         <header class="page_header">
             <div class="container">
-                <input type="button" id="add" value="Добавить">
-                <input type="button" id="update" value="Обновить">
+                <input type="button" id="btn-add" value="Добавить" class="popper" data-toggle="popover" data-placement="bottom">
+                <input type="button" id="btn-update" value="Обновить">
                 <input type="search" name="search" placeholder="Событие, дата или участник">
                 <span class="glyphicon glyphicon-search search"></span>
+
+                <div id="popover-quick-add" class="popover-quick-add popover-content hide">
+                    <form class="quick-add-form">
+                        <input type="text" id="quick-add" placeholder="14 марта, 14:00, День рождения"><br/>
+                        <input type="button" id="create" value="Создать">
+                        <span class="glyphicon glyphicon-remove remove quick-add-form-remove"></span>
+                    </form>
+                </div>
             </div>
         </header>
         <main>
@@ -85,16 +93,37 @@
                     </tr>
                     </tbody>
                 </table>
-                <form class="form">
-                    <input type="text" id="task" placeholder="Событие">
-                    <input type="text" id="date" placeholder="День, месяц, год">
-                    <input type="text" id="members" placeholder="Имена участников">
-                    <textarea rows="6" id="desc" placeholder="Описание"></textarea>
-                    <input type="button" id="done" value="Готово">
-                    <input type="button" id="delete" value="Удалить">
-                    <span class="glyphicon glyphicon-remove remove"></span>
-                </form>
+                <!-- TODO: доделать стили для этой формы
+                <div class="popover-edit-form popover-content">
+                    <form class="form-edit">
+                        <input type="text" id="task" placeholder="Событие">
+                        <input type="text" id="date" placeholder="День, месяц, год">
+                        <input type="text" id="members" placeholder="Имена участников">
+                        <textarea rows="6" id="desc" placeholder="Описание"></textarea>
+                        <input type="button" id="done" value="Готово">
+                        <input type="button" id="delete" value="Удалить">
+                        <span class="glyphicon glyphicon-remove remove"></span>
+                    </form>
+                </div>
+                -->
             </div>
         </main>
+        <script src="js/jquery-3.1.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- TODO: разобраться как это сделать на ангуляре -->
+        <script>
+            $(document).ready(function() {
+                $(".popper").popover({
+                    html: true,
+                    content: function() {
+                        return $("#popover-quick-add").html();
+                    },
+                    template: '<div class="popover quick-add-wrapper"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+                });
+                $(document).on('click', '.quick-add-form-remove', function () {
+                    $(".popper").popover('hide');
+                })
+            });
+        </script>
     </body>
 </html>

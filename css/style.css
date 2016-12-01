@@ -19,7 +19,7 @@ body {
     width: 950px;
 }
 
-#add, #update {
+#btn-add, #btn-update {
     position: absolute;
     height: 26px;
     width: 80px;
@@ -31,11 +31,11 @@ body {
     text-shadow: 0 2px 2px #005295;
 }
 
-#add {
+#btn-add {
     top: 55px;
 }
 
-#update {
+#btn-update {
     top: 55px;
     left: 105px;
 }
@@ -57,6 +57,66 @@ input[type^="search"] {
     top: 62px;
     right: 220px;
 }
+
+.popover {
+    max-width: 500px;
+    /*box-shadow: 2px 2px 4px 0 #dddddd,
+    -2px -2px 4px 0 #dddddd;*/
+    border: 1px solid #ebebeb;
+    border-radius: 0;
+}
+
+/*
+.popover-content {
+    width: 304px;
+    height: 100px;
+    padding: 20px;
+    background-color: #ffffff;
+
+
+    margin-bottom: 10px;
+} */
+
+.quick-add-wrapper {
+    margin-left: 112px;
+    top: 87px !important;
+}
+
+.quick-add-wrapper .arrow {
+
+    margin-left: -124px !important;
+}
+
+.popover-content{
+    padding: 0;
+}
+
+.quick-add-form {
+    width: 304px;
+    height: 100px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 0;
+}
+
+.quick-add-form input[type^="text"] {
+    font-size: 12px;
+    width: 267px;
+    padding: 4px 5px;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px 0 #b1b1b1;
+}
+
+.quick-add-form input[type^="button"] {
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #9c9c9c;
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: inset 0 -8px 10px #f2f2f2;
+}
+
 
 caption {
     padding: 0;
@@ -137,8 +197,8 @@ tbody tr:first-child td:nth-of-type(6), tbody tr:nth-child(3) td:nth-of-type(5) 
     background-color: #c1e4ff;
 }
 
-.form {
-    display: none;
+.form-edit {
+    /*display: none;*/
     position: relative;
     width: 308px;
     height: 331px;
@@ -150,26 +210,26 @@ tbody tr:first-child td:nth-of-type(6), tbody tr:nth-child(3) td:nth-of-type(5) 
     margin-bottom: 10px;
 }
 
-.form::after, .form::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 40px;
-    left: -12px;
-    background-color: #ffffff;
-    transform: rotate(45deg);
-    box-shadow: 2px 2px 4px 0 #dddddd,
-                -2px -2px 4px 0 #dddddd;
-    z-index: -1;
-}
+.form-edit::after, .form-edit::before {
+     content: "";
+     position: absolute;
+     width: 25px;
+     height: 25px;
+     top: 40px;
+     left: -12px;
+     background-color: #ffffff;
+     transform: rotate(45deg);
+     box-shadow: 2px 2px 4px 0 #dddddd,
+     -2px -2px 4px 0 #dddddd;
+     z-index: -1;
+ }
 
-.form::before {
+.form-edit::before {
     z-index: 1;
     box-shadow: none;
 }
 
-input[type^="text"], textarea {
+.form-edit input[type^="text"], textarea {
     font-size: 12px;
     width: 267px;
     padding: 4px 5px;
