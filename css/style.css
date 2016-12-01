@@ -35,6 +35,11 @@ body {
     top: 55px;
 }
 
+#btn-add:active, #btn-update:active {
+    color: #c2d0e3;
+    background-color: #005ba6;
+}
+
 #btn-update {
     top: 55px;
     left: 105px;
@@ -52,7 +57,7 @@ input[type^="search"] {
     box-shadow: inset 0 1px 2px 0 #b1b1b1;
 }
 
-.search {
+#search {
     position: absolute;
     top: 62px;
     right: 220px;
@@ -60,22 +65,9 @@ input[type^="search"] {
 
 .popover {
     max-width: 500px;
-    /*box-shadow: 2px 2px 4px 0 #dddddd,
-    -2px -2px 4px 0 #dddddd;*/
     border: 1px solid #ebebeb;
     border-radius: 0;
 }
-
-/*
-.popover-content {
-    width: 304px;
-    height: 100px;
-    padding: 20px;
-    background-color: #ffffff;
-
-
-    margin-bottom: 10px;
-} */
 
 .quick-add-wrapper {
     margin-left: 112px;
@@ -83,11 +75,10 @@ input[type^="search"] {
 }
 
 .quick-add-wrapper .arrow {
-
     margin-left: -124px !important;
 }
 
-.popover-content{
+.popover-content {
     padding: 0;
 }
 
@@ -117,6 +108,13 @@ input[type^="search"] {
     box-shadow: inset 0 -8px 10px #f2f2f2;
 }
 
+#quick-add-form-remove {
+    font-size: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}
 
 caption {
     padding: 0;
@@ -197,8 +195,7 @@ tbody tr:first-child td:nth-of-type(6), tbody tr:nth-child(3) td:nth-of-type(5) 
     background-color: #c1e4ff;
 }
 
-.form-edit {
-    /*display: none;*/
+.edit-form {
     position: relative;
     width: 308px;
     height: 331px;
@@ -210,26 +207,7 @@ tbody tr:first-child td:nth-of-type(6), tbody tr:nth-child(3) td:nth-of-type(5) 
     margin-bottom: 10px;
 }
 
-.form-edit::after, .form-edit::before {
-     content: "";
-     position: absolute;
-     width: 25px;
-     height: 25px;
-     top: 40px;
-     left: -12px;
-     background-color: #ffffff;
-     transform: rotate(45deg);
-     box-shadow: 2px 2px 4px 0 #dddddd,
-     -2px -2px 4px 0 #dddddd;
-     z-index: -1;
- }
-
-.form-edit::before {
-    z-index: 1;
-    box-shadow: none;
-}
-
-.form-edit input[type^="text"], textarea {
+.edit-form input[type^="text"], textarea {
     font-size: 12px;
     width: 267px;
     padding: 4px 5px;
@@ -264,7 +242,7 @@ textarea {
     margin-right: 12px;
 }
 
-.remove {
+#edit-form-remove {
     font-size: 8px;
     position: absolute;
     top: 8px;
