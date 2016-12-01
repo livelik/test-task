@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Календарь</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="page_header">
+            <div class="container">
+                <input type="button" id="add" value="Добавить">
+                <input type="button" id="update" value="Обновить">
+                <input type="search" name="search" placeholder="Событие, дата или участник">
+                <span class="glyphicon glyphicon-search search"></span>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <table class="table">
+                    <caption>
+                        <div class="paginator">
+                            <span><a class="prev" href="#">&#9668;</a></span>
+                            <span class="month">Март 2013</span>
+                            <span><a class="next" href="#">&#9658;</a></span>
+                            <span><a class="today" href="#">Сегодня</a></span>
+                        </div>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Понедельник, 25</th>
+                            <th>Вторник, 26</th>
+                            <th>Среда, 27</th>
+                            <th>Четверг, 28</th>
+                            <th>Пятница, 1</th>
+                            <th class="current-dow">Суббота, 2</th>
+                            <th>Воскресенье, 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>
+                                9
+                                <p class="task-name">Напиться!</p>
+                                <p class="task-members">Витя Костин, Петр Михайлов</p>
+                            </td>
+                            <td>10</td>
+                        </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>
+                            22
+                            <p class="task-name">ДР</p>
+                            <p class="task-members">Дима Молодцов</p>
+                        </td>
+                        <td>23</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <form class="form">
+                    <input type="text" id="task" placeholder="Событие">
+                    <input type="text" id="date" placeholder="День, месяц, год">
+                    <input type="text" id="members" placeholder="Имена участников">
+                    <textarea rows="6" id="desc" placeholder="Описание"></textarea>
+                    <input type="button" id="done" value="Готово">
+                    <input type="button" id="delete" value="Удалить">
+                    <span class="glyphicon glyphicon-remove remove"></span>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,216 @@
+body {
+    font-family: "Roboto", sans serif;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0 auto;
+    background-color: #ffffff;
+    color: #999999;
+}
+
+.page_header {
+    font-size: 13px;
+    height: 100px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 5px 0 #cfcfcf;
+}
+
+.container {
+    position: relative;
+    width: 950px;
+}
+
+#add, #update {
+    position: absolute;
+    height: 26px;
+    width: 80px;
+    color: #ffffff;
+    background-color: #006fca;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 #bdbdbd;
+    text-shadow: 0 2px 2px #005295;
+}
+
+#add {
+    top: 55px;
+}
+
+#update {
+    top: 55px;
+    left: 105px;
+}
+
+input[type^="search"] {
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    height: 26px;
+    width: 200px;
+    padding: 7px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px 0 #b1b1b1;
+}
+
+.search {
+    position: absolute;
+    top: 62px;
+    right: 220px;
+}
+
+caption {
+    padding: 0;
+}
+
+.paginator {
+    margin-top: 16px;
+    margin-bottom: 13px;
+
+}
+
+.paginator span {
+    display: inline-block;
+    min-width: 17px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 17px;
+    margin-right: 4px;
+}
+
+.paginator span a {
+    font-size: 10px;
+    color: #666666;
+    height: 17px;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 1px 0 #ececec,
+                inset -1px -1px 1px 0 #ececec;
+}
+
+.paginator .month {
+    font-size: 16px;
+    color: #000000;
+}
+
+.paginator .prev, .paginator .next {
+    font-size: 8px;
+    padding: 3px 5px;
+}
+
+.paginator .today {
+    font-size: 12px;
+    width: 57px;
+    padding: 1px 5px;
+}
+
+.table {
+    border: 1px solid #ebebeb;
+    border-collapse: collapse;
+}
+
+.table > thead > tr > th, .table > tbody > tr > td {
+    height: 120px;
+    width: 120px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #ebebeb;
+}
+
+th {
+    font-weight: normal;
+}
+
+.task-name, .task-members {
+    color: #6d7174;
+    margin-bottom: 0;
+}
+
+.current-dow, .task-name {
+    font-weight: bold;
+}
+
+thead th:nth-of-type(6) {
+    background-color: #f4f4f4;
+}
+
+tbody tr:first-child td:nth-of-type(6), tbody tr:nth-child(3) td:nth-of-type(5) {
+    background-color: #c1e4ff;
+}
+
+.form {
+    display: none;
+    position: relative;
+    width: 308px;
+    height: 331px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    box-shadow: 2px 2px 4px 0 #dddddd,
+                -2px -2px 4px 0 #dddddd;
+    margin-bottom: 10px;
+}
+
+.form::after, .form::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 40px;
+    left: -12px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+    box-shadow: 2px 2px 4px 0 #dddddd,
+                -2px -2px 4px 0 #dddddd;
+    z-index: -1;
+}
+
+.form::before {
+    z-index: 1;
+    box-shadow: none;
+}
+
+input[type^="text"], textarea {
+    font-size: 12px;
+    width: 267px;
+    padding: 4px 5px;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px 0 #b1b1b1;
+}
+
+#task {
+    font-size: 14px;
+}
+
+input[type^="text"] {
+    margin-bottom: 8px;
+}
+
+textarea {
+    margin-top: 29px;
+    margin-bottom: 22px;
+    resize: none;
+}
+
+#done, #delete {
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #9c9c9c;
+    border-radius: 4px;
+    box-shadow: inset 0 -8px 10px #f2f2f2;
+}
+
+#done {
+    margin-right: 12px;
+}
+
+.remove {
+    font-size: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}
+
+
+
